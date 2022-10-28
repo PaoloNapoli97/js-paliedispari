@@ -21,16 +21,20 @@ while( player < 1 || player > 5){
 }
 
 const somma = player + random(min, max); 
-console.log(somma);
+console.log(`La somma dei numeri è: ${somma}`);
 
-console.log(isEven(somma));
-
-// console.log(isEven(winnerwinnercickendinner(somma, value)));
+console.log(`La somma dei numeri è pari? ${isEven(somma)}`);
 
 if (paridispari === "pari" ){
     value = true;
 }
 
+if((isEven(somma) == true && value == true) || (isEven(somma) == false && value == false)){
+    console.log("il vincitore è il giocatore! Winner Winner Chicken Dinner!")
+}
+else {
+    console.log("Oh no, hai perso.. Ha Ha!")
+}
 
 // Funzioni
 
@@ -43,13 +47,4 @@ function isEven(somma) {
         return true;
     }
     return false;
-}
-
-function winnerwinnercickendinner(isEven, value){
-    if(isEven == true && value == true){
-        console.log("il vincitore è il giocatore")
-    }
-    else {
-        console.log("Oh no hai perso.. ah  ah")
-    }
 }
