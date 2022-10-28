@@ -4,15 +4,16 @@ const word = prompt("Inserisci una parola:");
 console.log(word);
 
 function stringreverse (word) {
-    
-    let reverse;
+
+    let reverse = "";
     for (let i = word.length - 1; i>=0; i--) {
         reverse += word[i];
     }
-        if (word === reverse){
-            return true;
+    
+    if (word === reverse){
+        return true;
     }
-    return reverse;
+    return false;
 }
 
-console.log(stringreverse(word));
+console.log("Le parole sono palindrome?", stringreverse(word));
